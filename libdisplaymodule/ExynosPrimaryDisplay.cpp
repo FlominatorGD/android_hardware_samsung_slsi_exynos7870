@@ -334,7 +334,7 @@ int ExynosPrimaryDisplay::handleWindowUpdate(hwc_display_contents_1_t __unused *
                 }
 
                 if ((currentRect.left > currentRect.right) || (currentRect.top > currentRect.bottom)) {
-                    HLOGD("[WIN_UPDATE] window(%zu) layer(%i) invalid region (%4d, %4d) - (%4d, %4d)",
+                    HLOGD("[WIN_UPDATE] window(%zu) layer(%d) invalid region (%4d, %4d) - (%4d, %4d)",
                         i, layerIdx, currentRect.left, currentRect.top, currentRect.right, currentRect.bottom);
                     return -eWindowUpdateInvalidRegion;
                 }

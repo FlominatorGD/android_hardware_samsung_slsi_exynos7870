@@ -46,6 +46,7 @@
 
 #include "log.h"
 
+#pragma clang diagnostic ignored "-Wformat"
 
 uint64_t hashConnection(
     pid_t pid,

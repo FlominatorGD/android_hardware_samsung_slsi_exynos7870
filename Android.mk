@@ -16,34 +16,34 @@
 
 ifeq ($(TARGET_BOARD_PLATFORM), exynos5)
 ifeq ($(TARGET_SLSI_VARIANT), bsp)
-ifeq ($(TARGET_SOC), exynos7880)
+ifeq ($(TARGET_SOC), exynos7870)
 
-ifeq ($(BOARD_USES_EXYNOS7880_MOBICORE), true)
-exynos7880_dirs += \
+ifeq ($(BOARD_USES_EXYNOS7870_MOBICORE), true)
+exynos7870_dirs += \
 	mobicore \
 	libgatekeeper \
 	libkeymaster
 endif
 
-ifeq ($(BOARD_USES_EXYNOS7880_GRALLOC), true)
-exynos7880_dirs += \
+ifeq ($(BOARD_USES_EXYNOS7870_GRALLOC), true)
+exynos7870_dirs += \
 	gralloc
 endif
 
 #ifeq ($(BOARD_BACK_CAMERA_USES_EXTERNAL_CAMERA), true)
-#exynos7880_dirs += \
+#exynos7870_dirs += \
 #	libcamera_external
 #else ifeq ($(BOARD_FRONT_CAMERA_USES_EXTERNAL_CAMERA), true)
-#exynos7880_dirs += \
+#exynos7870_dirs += \
 #	libcamera_external
 #else
-#exynos7880_dirs += \
+#exynos7870_dirs += \
 #	libcamera \
 #	libcamera3 \
 #	libcameraInterface
 #endif
 
-include $(call all-named-subdir-makefiles,$(exynos7880_dirs))
+include $(call all-named-subdir-makefiles,$(exynos7870_dirs))
 
 endif
 endif

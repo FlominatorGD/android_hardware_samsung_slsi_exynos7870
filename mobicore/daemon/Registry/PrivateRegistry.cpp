@@ -62,6 +62,8 @@
 
 #include "log.h"
 
+#pragma clang diagnostic ignored "-Wformat"
+
 /** Maximum size of a trustlet in bytes. */
 #define MAX_TL_SIZE       (1 * 1024 * 1024)
 /** Maximum size of a shared object container in bytes. */

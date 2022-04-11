@@ -15,7 +15,7 @@
 LOCAL_PATH:= $(call my-dir)
 
 #################
-# camera.exynos7880.so
+# camera.exynos7870.so
 
 include $(CLEAR_VARS)
 

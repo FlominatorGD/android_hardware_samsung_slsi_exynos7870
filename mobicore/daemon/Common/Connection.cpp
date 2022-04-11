@@ -46,6 +46,7 @@
 //#define LOG_VERBOSE
 #include "log.h"
 
+#pragma clang diagnostic ignored "-Wformat"
 
 //------------------------------------------------------------------------------
 Connection::Connection(void)

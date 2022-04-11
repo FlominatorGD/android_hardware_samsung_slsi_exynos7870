@@ -38,6 +38,8 @@
 #include "CSemaphore.h"
 #include <stdio.h>
 
+#pragma clang diagnostic ignored "-Wconstant-conversion"
+
 //------------------------------------------------------------------------------
 CSemaphore::CSemaphore(int size) : m_waiters_count(0), m_count(size)
 {

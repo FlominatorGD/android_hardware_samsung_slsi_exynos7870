@@ -16,6 +16,13 @@ LOCAL_SRC_FILES += \
 	./../../$(TARGET_SOC)/libdisplaymodule/ExynosPrimaryDisplay.cpp \
 	./../../$(TARGET_SOC)/libdisplaymodule/ExynosDisplayResourceManagerModule.cpp
 
+#
+LOCAL_HEADER_LIBRARIES := libhardware_headers libcutils_headers libhardware_legacy_headers
+
+LOCAL_C_INCLUDES += system/core/include \
+                    system/core/libcutils/include \
+										frameworks/native/opengl/include
+
 ifeq ($(BOARD_USES_DUAL_DISPLAY), true)
 LOCAL_SRC_FILES += ./../../$(TARGET_SOC)/libdisplaymodule/ExynosSecondaryDisplayModule.cpp
 endif

@@ -19,6 +19,7 @@ LOCAL_PATH := $(call my-dir)
 # hw/<OVERLAY_HARDWARE_MODULE_ID>.<ro.product.board>.so
 include $(CLEAR_VARS)
 
+LOCAL_SHARED_LIBRARIES := liblog libcutils
 LOCAL_MODULE_RELATIVE_PATH:= hw
 #LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/hw
 LOCAL_SHARED_LIBRARIES := liblog libcutils libion libutils
@@ -29,10 +30,13 @@ endif
 
 MALI_AFBC_GRALLOC := 1
 
+LOCAL_C_INCLUDES += system/core/libcutils/include
 LOCAL_C_INCLUDES := \
 	$(LOCAL_PATH)/../include \
 	$(TOP)/hardware/samsung_slsi/exynos/include \
-	$(TOP)/hardware/samsung_slsi/exynos5/include
+	$(TOP)/hardware/samsung_slsi/exynos5/include \
+	system/core/include \
+	system/core/libcutils/include
 
 LOCAL_SRC_FILES := 	\
 	format_chooser.cpp \
@@ -40,6 +44,8 @@ LOCAL_SRC_FILES := 	\
 	framebuffer.cpp \
 	mapper.cpp
 
+LOCAL_HEADER_LIBRARIES := libhardware_headers libcutils_headers
+LOCAL_VENDOR_MODULE := true
 LOCAL_MODULE := gralloc.$(TARGET_BOARD_PLATFORM)
 LOCAL_CFLAGS += -DLOG_TAG=\"gralloc\" -Wno-missing-field-initializers -DMALI_AFBC_GRALLOC=$(MALI_AFBC_GRALLOC)
 

@@ -18,5 +18,7 @@ LOCAL_C_INCLUDES += \
 	$(TOP)/hardware/samsung_slsi/exynos/libmpp
 endif
 
+LOCAL_HEADER_LIBRARIES := libhardware_headers libcutils_headers libhardware_legacy_headers
+
 LOCAL_SRC_FILES += \
 	./../../$(TARGET_SOC)/libvirtualdisplaymodule/ExynosVirtualDisplayModule.cpp

@@ -20,7 +20,9 @@ PRODUCT_PACKAGES := \
 	libOMX.Exynos.AVC.Decoder \
 	libOMX.Exynos.WMV.Decoder \
 	libOMX.Exynos.VP8.Decoder \
+	libOMX.Exynos.VP9.Decoder \
 	libOMX.Exynos.HEVC.Decoder \
+	libOMX.Exynos.HEVC.Encoder \
 	libOMX.Exynos.MPEG4.Encoder \
 	libOMX.Exynos.AVC.Encoder \
 	libOMX.Exynos.VP8.Encoder \
